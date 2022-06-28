@@ -1,0 +1,7 @@
+{
+    "git.ignoreLimitWarning": true,
+    "solargraph.commandPath": "solargraph",
+    "solargraph.formatting": true,
+    "editor.formatOnSave": true,
+    "solargraph.diagnostics": true,
+}

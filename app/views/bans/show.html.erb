@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ban %>
+
+<div>
+  <%= link_to "Edit this ban", edit_ban_path(@ban) %> |
+  <%= link_to "Back to bans", bans_path %>
+
+  <%= button_to "Destroy this ban", @ban, method: :delete %>
+</div>

@@ -1,0 +1,62 @@
+<%= form_with(model: ban) do |form| %>
+  <% if ban.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ban.errors.count, "error") %> prohibited this ban from being saved:</h2>
+
+      <ul>
+        <% ban.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :ip, style: "display: block" %>
+    <%= form.text_field :ip %>
+  </div>
+
+  <div>
+    <%= form.label :country, style: "display: block" %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div>
+    <%= form.label :ts, style: "display: block" %>
+    <%= form.datetime_field :ts %>
+  </div>
+
+  <div>
+    <%= form.label :port, style: "display: block" %>
+    <%= form.number_field :port %>
+  </div>
+
+  <div>
+    <%= form.label :jail, style: "display: block" %>
+    <%= form.text_field :jail %>
+  </div>
+
+  <div>
+    <%= form.label :username, style: "display: block" %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.label :uri, style: "display: block" %>
+    <%= form.text_field :uri %>
+  </div>
+
+  <div>
+    <%= form.label :method, style: "display: block" %>
+    <%= form.text_field :method %>
+  </div>
+
+  <div>
+    <%= form.label :user_agent, style: "display: block" %>
+    <%= form.text_area :user_agent %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
