@@ -1,7 +1,8 @@
 {
-    "git.ignoreLimitWarning": true,
-    "solargraph.commandPath": "solargraph",
-    "solargraph.formatting": true,
-    "editor.formatOnSave": true,
-    "solargraph.diagnostics": true,
+  "git.ignoreLimitWarning": true,
+  "solargraph.commandPath": "bin/solargraph",
+  "solargraph.formatting": true,
+  "editor.formatOnSave": true,
+  "solargraph.diagnostics": true,
+  "ruby.rubocop.executePath": "bin/"
 }
