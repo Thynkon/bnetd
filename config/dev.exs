@@ -26,7 +26,8 @@ config :bnetd, BnetdWeb.Endpoint,
   secret_key_base: "UnV8hNIShC9IdVMizS9pLuyULvvNZbedAqxo2iOs83oFv2Cw8SFIJ5sWzOiIn91C",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support
