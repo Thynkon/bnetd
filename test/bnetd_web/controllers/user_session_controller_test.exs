@@ -11,7 +11,7 @@ defmodule BnetdWeb.UserSessionControllerTest do
     test "renders log in page", %{conn: conn} do
       conn = get(conn, Routes.user_session_path(conn, :new))
       response = html_response(conn, 200)
-      assert response =~ "<h1>Log in</h1>"
+      assert String.match?(response, ~r/<h3 .*>Welcome<\/h3>/)
       assert response =~ "Register</a>"
       assert response =~ "Forgot your password?</a>"
     end
@@ -75,7 +75,7 @@ defmodule BnetdWeb.UserSessionControllerTest do
         })
 
       response = html_response(conn, 200)
-      assert response =~ "<h1>Log in</h1>"
+      assert String.match?(response, ~r/<h3 .*>Welcome<\/h3>/)
       assert response =~ "Invalid email or password"
     end
   end

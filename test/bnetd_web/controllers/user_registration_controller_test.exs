@@ -7,9 +7,9 @@ defmodule BnetdWeb.UserRegistrationControllerTest do
     test "renders registration page", %{conn: conn} do
       conn = get(conn, Routes.user_registration_path(conn, :new))
       response = html_response(conn, 200)
-      assert response =~ "<h1>Register</h1>"
+      assert response =~ "Forgot your password?</a>"
       assert response =~ "Log in</a>"
-      assert response =~ "Register</a>"
+      assert String.match?(response, ~r/<h3 .*>Join us<\/h3>/)
     end
 
     test "redirects if already logged in", %{conn: conn} do
@@ -46,7 +46,7 @@ defmodule BnetdWeb.UserRegistrationControllerTest do
         })
 
       response = html_response(conn, 200)
-      assert response =~ "<h1>Register</h1>"
+      assert String.match?(response, ~r/<h3 .*>Join us<\/h3>/)
       assert response =~ "must have the @ sign and no spaces"
       assert response =~ "should be at least 12 character"
     end
